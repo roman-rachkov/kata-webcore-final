@@ -1,8 +1,18 @@
 @import "fonts";
 @import "mixins";
 
-body{
+body {
   background-color: #eee;
-  font-family: 'TT Lakes', sans-serif;
-  font-weight: 700;
+}
+
+h1 {
+  @include font-bold;
+}
+
+h2 {
+  @include font-medium;
+}
+
+h3 {
+  @include font-normal;
 }
