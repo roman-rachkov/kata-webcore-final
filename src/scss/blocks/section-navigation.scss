@@ -1,0 +1,31 @@
+.section-navigation {
+  padding-top: 13px;
+  &__items {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  &__item {
+    padding: 0 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 6px 0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+
+    &:has(.section-navigation__link--active) {
+      background-color: $white-color;
+      border: 2px solid $light-selected-color;
+    }
+  }
+
+  &__link {
+    letter-spacing: -0.2px;
+    @include font-medium;
+    color: $text-second;
+  }
+}

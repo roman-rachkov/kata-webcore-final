@@ -1,0 +1,14 @@
+.langs {
+  &__item {
+    letter-spacing: -0.2px;
+    @include font-medium;
+    margin-right: 5px;
+    &--active {
+      color: $text-second;
+      pointer-events: none;
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+}

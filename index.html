@@ -1,18 +1,255 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<div id="app">
-    <h1>Услуги и сервисы</h1>
-    <h2>Услуги и сервисы</h2>
-    <h3>Услуги и сервисы</h3>
-</div>
-<script src="src/js/main.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CPS - Услуги и сервисы</title>
+  </head>
+  <body>
+    <main class="page">
+      <aside class="menu">
+        <header class="menu__header">
+          <div class="logo">
+            <a href="#" class="logo__link" aria-label="Перейти на главную">
+              <img src="/src/images/logo.svg" alt="#" class="logo__image" />
+            </a>
+          </div>
+          <button class="icon-button menu__search" aria-label="Открыть поиск">
+            <img src="/src/images/icons/search.svg" alt="Поиск" />
+          </button>
+        </header>
+        <nav class="menu__navigation">
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link"
+                aria-label="Открыть ремонт техники"
+              >
+                Ремонт техники
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link navigation__link--active"
+                aria-label="Открыть услуги и сервисы"
+              >
+                Услуги и сервисы
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link"
+                aria-label="Открыть информацию корпоративным клиентам"
+              >
+                Корпоративным клиентам
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link"
+                aria-label="Откртыть информацию продовцам техники"
+              >
+                Продавцам техники
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link"
+                aria-label="Открыть информацию партнерам"
+              >
+                Партнерам
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link"
+                aria-label="Открыть информацию Производителям"
+              >
+                Производителям
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link"
+                aria-label="Отрыть информцию о наших сервисных центрах"
+              >
+                Наши сервисные центры
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a
+                href="#"
+                class="navigation__link"
+                aria-label="Открыть контакты"
+              >
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="contacts">
+          <div class="contacts__actions">
+            <button
+              class="contacts__action icon-button"
+              area-label="Заказать звонок"
+            >
+              <img src="/src/images/icons/phone.svg" alt="Звонок" />
+            </button>
+            <button
+              class="contacts__action icon-button"
+              area-label="Оставить сообщение"
+            >
+              <img src="/src/images/icons/message.svg" alt="Сообщение" />
+            </button>
+            <button
+              class="contacts__action icon-button"
+              area-label="Перейти в профиль"
+            >
+              <img src="/src/images/icons/man.svg" alt="Профиль" />
+            </button>
+          </div>
+          <a href="mailto:mail@cps.com" class="contacts__email">mail@cps.com</a>
+          <a href="tel:+78008908900" class="contacts__phone">8 800 890 8900</a>
+        </div>
+
+        <div class="menu__langs langs">
+          <a
+            href="#"
+            aria-label="Change language to RU"
+            class="langs__item langs__item--active"
+            >RU</a
+          >
+          <a href="#" aria-label="Change language to EN" class="langs__item"
+            >EN</a
+          >
+          <a href="#" aria-label="Change language to CH" class="langs__item"
+            >CH</a
+          >
+        </div>
+      </aside>
+
+      <section class="page__main">
+        <header class="page__header header">
+          <div class="header__top">
+            <h1 class="header__title">Услуги и сервисы</h1>
+            <div class="header__actions">
+              <a href="#" class="header__action action"
+                >Оставить заявку
+                <span class="icon-button action__icon">
+                  <img src="/src/images/icons/tools.svg" alt="Заявка" />
+                </span>
+              </a>
+              <a href="#" class="header__action action"
+                >Статус ремонта
+                <span class="icon-button action__icon">
+                  <img src="/src/images/icons/note.svg" alt="Заявка" />
+                </span>
+              </a>
+            </div>
+          </div>
+          <nav class="section-navigation">
+            <ul class="section-navigation__items">
+              <li class="section-navigation__item">
+                <a
+                  href="#"
+                  class="section-navigation__link section-navigation__link--active"
+                  aria-label="1"
+                >
+                  Ремонтируемые бренды
+                </a>
+              </li>
+              <li class="section-navigation__item">
+                <a href="#" class="section-navigation__link" aria-label="1">
+                  Дополнительные услуги
+                </a>
+              </li>
+              <li class="section-navigation__item">
+                <a href="#" class="section-navigation__link" aria-label="1">
+                  Цены на услуги
+                </a>
+              </li>
+              <li class="section-navigation__item">
+                <a href="#" class="section-navigation__link" aria-label="1">
+                  Адреса сервисных центров
+                </a>
+              </li>
+              <li class="section-navigation__item">
+                <a href="#" class="section-navigation__link" aria-label="1">
+                  Специальные цены
+                </a>
+              </li>
+              <li class="section-navigation__item">
+                <a href="#" class="section-navigation__link" aria-label="1">
+                  Отзывы
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <article class="page__post post">
+          <img src="/src/images/post-image.png" alt="" class="post__image" />
+          <div class="post__text">
+            <p class="post__paragraph"
+              >Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.</p
+            >
+            <p class="post__paragraph"
+              >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</p
+            >
+            <p class="post__paragraph"
+              >Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.</p
+            >
+            <p class="post__paragraph"
+              >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</p
+            >
+            <p class="post__paragraph"
+              >Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.</p
+            >
+            <p class="post__paragraph"
+              >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</p
+            >
+            <p class="post__paragraph"
+              >Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.</p
+            >
+            <p class="post__paragraph"
+              >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</p
+            >
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="src/js/main.js" type="module"></script>
+  </body>
 </html>

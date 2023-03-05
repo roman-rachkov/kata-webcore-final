@@ -1,0 +1,33 @@
+.post {
+  display: flex;
+  justify-content: space-between;
+
+  &__text {
+    max-height: 160px;
+    width: 490px;
+    overflow: hidden;
+
+    //margin-right: 36px;
+
+    &--expanded {
+      max-height: unset;
+    }
+  }
+  &__image {
+    order: 1;
+    border-radius: 6px;
+    width: 532px;
+    height: 306px;
+    object-fit: cover;
+  }
+  &__paragraph {
+    margin: 20px 0 0;
+    font-size: 0.875em;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+
+    &:first-child {
+      margin: 6px 0 0;
+    }
+  }
+}

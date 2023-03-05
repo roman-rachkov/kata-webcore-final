@@ -1,0 +1,41 @@
+.navigation {
+  @include font-medium;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 31px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:has(.navigation__link--active) {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 28.31px;
+        width: 4px;
+        left: -23px;
+        top: -7px;
+        border-radius: 5px;
+        background-color: $selected-color;
+      }
+    }
+  }
+
+  &__link {
+    letter-spacing: -0.2px;
+    &--active {
+      color: $text-second;
+      pointer-events: none;
+      &:hover {
+        cursor: default;
+        text-decoration: none;
+      }
+    }
+  }
+}

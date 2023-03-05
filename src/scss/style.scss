@@ -1,18 +1,24 @@
-@import "fonts";
-@import "mixins";
+@import 'imports';
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #eee;
-}
-
-h1 {
-  @include font-bold;
-}
-
-h2 {
-  @include font-medium;
-}
-
-h3 {
   @include font-normal;
+  color: $text-main;
+  background-color: $bg-color;
+}
+
+main {
+  display: flex;
+}
+
+a {
+  color: $text-main;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -1,0 +1,29 @@
+.contacts {
+  margin-top: 242px;
+  margin-left: -2px;
+
+  &__actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__action {
+    margin-right: 16px;
+  }
+
+  &__email {
+    display: block;
+    @include font-medium;
+    margin-top: 20px;
+    letter-spacing: -0.2px;
+  }
+
+  &__phone {
+    display: block;
+    @include font-bold;
+    font-size: 1.5em;
+    margin-top: 20px;
+    letter-spacing: -0.6px;
+  }
+}

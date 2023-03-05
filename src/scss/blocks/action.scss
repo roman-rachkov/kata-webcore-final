@@ -1,0 +1,14 @@
+.action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: -0.2px;
+  @include font-medium;
+  &__link {
+  }
+
+  &__icon {
+    display: inline-flex;
+    margin-left: 8px;
+  }
+}
