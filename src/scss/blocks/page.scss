@@ -3,6 +3,20 @@
     width: 100%;
     max-width: 1120px;
     margin-right: auto;
-    padding: 48px 31px 0 35px;
+    padding: 46px 31px 0 35px;
+  }
+
+  &__hardware {
+    margin-top: 34px;
+
+    &.block--expanded {
+      .block__wrapper {
+        max-height: 450px;
+      }
+    }
+  }
+
+  &__price {
+    margin-top: 36px;
   }
 }

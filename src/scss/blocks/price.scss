@@ -1,0 +1,11 @@
+.price {
+  &__caption {
+    position: relative;
+    text-align: left;
+    margin-bottom: 81px;
+  }
+
+  &__row {
+    background-color: $white-color;
+  }
+}

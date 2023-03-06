@@ -1,11 +1,11 @@
 .menu {
   background-color: $white-color;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 100vh;
   max-width: 306px;
   margin-left: auto;
-  padding: 31px 29px 30px 21px;
+  padding: 29px 29px 30px 21px;
 
   &__header {
     display: flex;

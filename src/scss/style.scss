@@ -8,6 +8,7 @@ body {
   @include font-normal;
   color: $text-main;
   background-color: $bg-color;
+  overflow-x: hidden;
 }
 
 main {

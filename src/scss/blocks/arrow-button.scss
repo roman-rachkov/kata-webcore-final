@@ -1,0 +1,27 @@
+.arrow-button {
+  position: relative;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid $button-color;
+  background-color: transparent;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $button-hover;
+    &:before {
+      color: $button-hover;
+    }
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7.5px;
+    height: 12px;
+    color: $button-color;
+    transform: translate(-50%, -50%);
+    background: url('@/images/icons/arrow.svg');
+  }
+}

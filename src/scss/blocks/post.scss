@@ -1,25 +1,40 @@
 .post {
-  display: flex;
-  justify-content: space-between;
+  min-height: 340px;
 
-  &__text {
-    max-height: 160px;
-    width: 490px;
-    overflow: hidden;
-
-    //margin-right: 36px;
-
-    &--expanded {
-      max-height: unset;
+  &--expanded {
+    .post__wrapper {
+      transition: $close-transition;
+      max-height: 600px;
     }
   }
+
+  &__placeholder {
+    float: right;
+    width: 532px;
+    height: 306px;
+    margin-left: 33px;
+    margin-bottom: 33px;
+    transform: translateX(4px);
+  }
+
+  &__wrapper {
+    transition: $open-transition;
+    max-height: 170px;
+    overflow: hidden;
+    padding-top: 10px;
+    margin-bottom: 16px;
+  }
+
   &__image {
-    order: 1;
     border-radius: 6px;
     width: 532px;
     height: 306px;
     object-fit: cover;
+    position: absolute;
+    right: 231px;
+    top: 179px;
   }
+
   &__paragraph {
     margin: 20px 0 0;
     font-size: 0.875em;
@@ -27,7 +42,7 @@
     line-height: 20px;
 
     &:first-child {
-      margin: 6px 0 0;
+      margin: 0;
     }
   }
 }
