@@ -1,0 +1,7 @@
+.arrow {
+  width: 7.5px;
+  height: 12px;
+  background-color: $white-color;
+  -webkit-mask-image: url('@/images/icons/arrow.svg');
+  mask-image: url('@/images/icons/arrow.svg');
+}

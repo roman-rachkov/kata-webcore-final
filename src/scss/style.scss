@@ -7,8 +7,10 @@
 body {
   @include font-normal;
   color: $text-main;
+  letter-spacing: 0.2px;
   background-color: $bg-color;
   overflow-x: hidden;
+  display: flex;
 }
 
 main {

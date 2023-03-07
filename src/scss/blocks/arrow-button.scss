@@ -9,7 +9,7 @@
     cursor: pointer;
     border: 2px solid $button-hover;
     &:before {
-      color: $button-hover;
+      background-color: $button-hover;
     }
   }
   &:before {
@@ -20,8 +20,9 @@
     left: 50%;
     width: 7.5px;
     height: 12px;
-    color: $button-color;
+    background-color: $button-color;
     transform: translate(-50%, -50%);
-    background: url('@/images/icons/arrow.svg');
+    -webkit-mask-image: url('@/images/icons/arrow.svg');
+    mask-image: url('@/images/icons/arrow.svg');
   }
 }

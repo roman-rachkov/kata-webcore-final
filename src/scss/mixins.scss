@@ -1,14 +1,14 @@
-@mixin font-bold(){
+@mixin font-bold() {
   font-family: 'TT Lakes', sans-serif;
   font-weight: 700;
 }
 
-@mixin font-medium(){
+@mixin font-medium() {
   font-family: 'TT Lakes', sans-serif;
   font-weight: 500;
 }
 
-@mixin font-normal(){
+@mixin font-normal() {
   font-family: 'TT Lakes', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }

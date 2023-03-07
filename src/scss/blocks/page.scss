@@ -1,10 +1,10 @@
 .page {
-  &__main {
-    width: 100%;
-    max-width: 1120px;
-    margin-right: auto;
-    padding: 46px 31px 0 35px;
-  }
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1120px;
+  margin-right: auto;
+  padding: 46px 31px 0 35px;
 
   &__hardware {
     margin-top: 34px;
@@ -18,5 +18,9 @@
 
   &__price {
     margin-top: 36px;
+  }
+
+  &__footer {
+    margin-top: 86px;
   }
 }

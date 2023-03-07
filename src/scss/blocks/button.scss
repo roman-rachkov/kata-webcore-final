@@ -1,2 +1,30 @@
 .button {
+  display: block;
+  width: 100%;
+  @include font-bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $white-color;
+  background-color: $button-color;
+  padding: 10px 14px;
+  letter-spacing: -0.15px;
+  border-radius: 16px;
+  position: relative;
+  &:hover {
+    text-decoration: none;
+    background-color: $button-hover;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 7.5px;
+    height: 12px;
+    background-color: $white-color;
+    transform: translateY(-50%);
+    -webkit-mask-image: url('@/images/icons/arrow.svg');
+    mask-image: url('@/images/icons/arrow.svg');
+  }
 }
