@@ -13,7 +13,14 @@
 <body>
 <aside class="menu">
   <header class="menu__header">
-    <div class="logo">
+    <button class="icon-button menu__close">
+      <img src="src/images/icons/close.svg" alt="close">
+    </button>
+    <button class="icon-button menu__show">
+      <img src="src/images/icons/burger.svg" alt="close">
+    </button>
+    <span class="menu__delimiter"></span>
+    <div class="logo menu__logo">
       <a href="#" class="logo__link" aria-label="Перейти на главную">
         <img src="/src/images/logo.svg" alt="#" class="logo__image"/>
       </a>
@@ -99,17 +106,19 @@
     </ul>
   </nav>
 
-  <div class="contacts">
+  <div class="contacts menu__contacts">
     <div class="contacts__actions">
       <button
           class="contacts__action icon-button"
           area-label="Заказать звонок"
+          data-modal="#call"
       >
         <img src="/src/images/icons/phone.svg" alt="Звонок"/>
       </button>
       <button
           class="contacts__action icon-button"
           area-label="Оставить сообщение"
+          data-modal="#feedback"
       >
         <img src="/src/images/icons/message.svg" alt="Сообщение"/>
       </button>
@@ -512,6 +521,41 @@
     </a>
     <p class="footer__no-offer">Информация, размещенная на данной странице, не является публичной офертой</p>
   </footer>
+
+  <dialog class="modal" id="feedback">
+    <form action="#" class="modal__form" method="post">
+      <button class="icon-button modal__close">
+        <img src="/src/images/icons/close.svg" alt="close">
+      </button>
+      <h2 class="modal__title">Обратная связь</h2>
+      <input type="text" class="input modal__input" name="fio" placeholder="Имя">
+      <input type="tel" class="input modal__input" name="phone" placeholder="Телефон">
+      <input type="email" class="input modal__input" name="email" placeholder="Электронная почта">
+      <textarea name="message" class="input modal__input modal__textarea" placeholder="Сообщение"></textarea>
+      <p class="modal__policy">
+        Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и
+        соглашаетесь с нашей
+        <a href="#" class="modal__link">политикой конфиденциальности</a>
+      </p>
+      <button type="submit" class="modal__button button">отправить</button>
+    </form>
+  </dialog>
+  <dialog class="modal" id="call">
+    <form action="#" class="modal__form" method="post">
+      <button class="icon-button modal__close">
+        <img src="/src/images/icons/close.svg" alt="close">
+      </button>
+      <h2 class="modal__title">Заказать звонок</h2>
+      <input type="tel" class="input modal__input" name="phone" placeholder="Телефон">
+      <p class="modal__policy">
+        Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и
+        соглашаетесь с нашей
+        <a href="#" class="modal__link">политикой конфиденциальности</a>
+      </p>
+      <button type="submit" class="modal__button button">отправить</button>
+    </form>
+  </dialog>
+
 </main>
 <script src="src/js/main.js" type="module"></script>
 </body>

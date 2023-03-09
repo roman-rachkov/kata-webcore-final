@@ -1,10 +1,12 @@
 //Colors
 $bg-color: #f8f8f8;
 $white-color: #fff;
+$white-color-transparent: rgba($white-color, 0.96);
 $text-main: #1b1c21;
 $text-second: #7e7e82;
 $selected-color: #41f6d7;
 $light-selected-color: #b8ffec;
+$tean-light: #d9fff5;
 $button-color: #ff3e79;
 $button-hover: lighten($button-color, 10%);
 $item-border: #eaeaea;
@@ -13,7 +15,13 @@ $item-border: #eaeaea;
 $font-large: 16px;
 
 //resolution
-$res-l: 1440px;
+$res-xxl: 1440px;
+$res-xl: 1366px;
+$res-l: 1280px;
+$res-m: 1024px;
+$res-s: 768px;
+$res-xs: 520px;
+$res-xxs: 320px;
 
 $close-transition: max-height 0.2s linear;
 $open-transition: max-height 0.4s linear;

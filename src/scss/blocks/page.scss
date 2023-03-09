@@ -1,10 +1,20 @@
 .page {
   display: flex;
   flex-direction: column;
-
   max-width: 1120px;
   margin-right: auto;
   padding: 46px 31px 0 35px;
+
+  @include responsiveMax($res-xl) {
+    max-width: 1052px;
+  }
+
+  @include responsiveMax($res-m) {
+    margin: auto;
+    padding: 32px 24px;
+    width: 100vw;
+    max-width: unset;
+  }
 
   &__hardware {
     margin-top: 34px;
@@ -21,6 +31,6 @@
   }
 
   &__footer {
-    margin-top: 86px;
+    margin-top: 54px;
   }
 }

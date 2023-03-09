@@ -34,8 +34,17 @@
   &__item {
     margin-right: 32px;
 
-    &:nth-child(4n) {
-      margin-right: 0;
+    @include responsiveMax($res-xl) {
+      margin-right: 9px;
+      &:nth-child(4n) {
+        margin-left: auto;
+      }
+    }
+
+    @include responsiveMin($res-l) {
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -45,7 +54,7 @@
     top: 0;
     width: 100vw;
     box-sizing: content-box;
-    border-top: 1px solid $light-selected-color;
+    border-top: 1px solid $tean-light;
     text-transform: uppercase;
     @include font-normal;
     letter-spacing: -0.2px;

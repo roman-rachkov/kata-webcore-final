@@ -1,0 +1,93 @@
+.modal {
+  position: fixed;
+  border: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+  background-color: transparent;
+  max-width: 1440px;
+  overflow: hidden;
+  max-height: 100vh;
+
+  &::backdrop {
+    background-color: $white-color-transparent;
+  }
+
+  &__form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 447px;
+    height: 100%;
+    background-color: $white-color;
+    padding: 44px 38px 0 32px;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50vw;
+      height: 100%;
+      background-color: $white-color;
+      z-index: -1;
+      box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+        16px 0px 52px rgba(14, 24, 80, 0.2);
+    }
+  }
+
+  &__title {
+    position: relative;
+    @include font-bold;
+    font-size: 1.5em;
+    letter-spacing: -0.6px;
+    margin: 0 0 7px;
+
+    &:before {
+      position: absolute;
+      top: -11px;
+      left: -33px;
+      width: 3px;
+      height: 40px;
+      background-color: $selected-color;
+      content: '';
+      display: block;
+    }
+  }
+
+  &__input {
+    margin-top: 16px;
+  }
+
+  &__textarea {
+    height: 120px;
+  }
+
+  &__policy {
+    line-height: 1.15em;
+    font-size: 0.875em;
+    @include font-medium;
+    margin: 17px 0 0;
+    letter-spacing: 0;
+  }
+
+  &__button {
+    margin-top: 22px;
+    width: 135px;
+    margin-left: auto;
+  }
+
+  &__link {
+    color: $button-color;
+  }
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    left: -73px;
+  }
+}

@@ -3,6 +3,20 @@
     font-size: 1.75em;
     margin: 0;
     letter-spacing: -0.6px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -33px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      height: 40px;
+      width: 3px;
+      border-radius: 3px;
+      background-color: $selected-color;
+    }
   }
 
   &__top {
@@ -14,6 +28,9 @@
     width: fit-content;
     display: flex;
     height: 32px;
+    @include responsiveMax($res-m) {
+      display: none;
+    }
   }
 
   &__action {

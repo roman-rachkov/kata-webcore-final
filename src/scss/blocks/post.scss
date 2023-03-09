@@ -1,10 +1,14 @@
 .post {
   min-height: 340px;
+  position: relative;
 
   &--expanded {
     .post__wrapper {
       transition: $close-transition;
       max-height: 600px;
+      @include responsiveMax($res-xl) {
+        max-height: 630px;
+      }
     }
   }
 
@@ -31,8 +35,8 @@
     height: 306px;
     object-fit: cover;
     position: absolute;
-    right: 231px;
-    top: 179px;
+    right: -3px;
+    top: 0;
   }
 
   &__paragraph {

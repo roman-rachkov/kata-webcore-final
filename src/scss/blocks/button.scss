@@ -1,18 +1,23 @@
 .button {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   @include font-bold;
   font-size: 12px;
   text-transform: uppercase;
   color: $white-color;
   background-color: $button-color;
-  padding: 10px 14px;
+  padding: 10px 14px 9px;
   letter-spacing: -0.15px;
   border-radius: 16px;
   position: relative;
+  outline: none;
+  border: none;
   &:hover {
     text-decoration: none;
     background-color: $button-hover;
+    cursor: pointer;
   }
   &:after {
     content: '';

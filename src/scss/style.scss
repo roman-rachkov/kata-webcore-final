@@ -11,10 +11,20 @@ body {
   background-color: $bg-color;
   overflow-x: hidden;
   display: flex;
+  position: relative;
+  @include responsiveMax($res-m) {
+    flex-direction: column;
+  }
 }
 
 main {
   display: flex;
+}
+
+.hideOnMedAndLow {
+  @include responsiveMax($res-m) {
+    display: none;
+  }
 }
 
 a {

@@ -12,3 +12,15 @@
   font-family: 'TT Lakes', sans-serif;
   font-weight: 400;
 }
+
+@mixin responsiveMax($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin responsiveMin($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
