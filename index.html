@@ -12,6 +12,7 @@
 </head>
 <body>
 <aside class="menu">
+  <div class="menu__shadow"></div>
   <header class="menu__header">
     <button class="icon-button menu__close">
       <img src="src/images/icons/close.svg" alt="close">
@@ -109,29 +110,45 @@
   <div class="contacts menu__contacts">
     <div class="contacts__actions">
       <button
-          class="contacts__action icon-button"
+          class="contacts__action icon-button menu__action"
           area-label="Заказать звонок"
           data-modal="#call"
       >
         <img src="/src/images/icons/phone.svg" alt="Звонок"/>
       </button>
       <button
-          class="contacts__action icon-button"
+          class="contacts__action icon-button menu__action"
           area-label="Оставить сообщение"
           data-modal="#feedback"
       >
         <img src="/src/images/icons/message.svg" alt="Сообщение"/>
       </button>
       <button
-          class="contacts__action icon-button"
+          class="contacts__action icon-button menu__action"
           area-label="Перейти в профиль"
       >
         <img src="/src/images/icons/man.svg" alt="Профиль"/>
       </button>
     </div>
-    <a href="mailto:mail@cps.com" class="contacts__email">mail@cps.com</a>
-    <a href="tel:+78008908900" class="contacts__phone">8 800 890 8900</a>
+    <a href="mailto:mail@cps.com" class="contacts__email menu__email">mail@cps.com</a>
+    <a href="tel:+78008908900" class="contacts__phone menu__phone">8 800 890 8900</a>
   </div>
+
+  <div class="menu__delimiter"></div>
+
+  <div class="menu__actions">
+    <a href="#" class="menu__action action">
+      <span class="icon-button action__icon menu__action-icon">
+                  <img src="/src/images/icons/tools.svg" alt="Заявка"/>
+                </span>
+    </a>
+    <a href="#" class="menu__action action">
+      <span class="icon-button action__icon menu__action-icon">
+                  <img src="/src/images/icons/note.svg" alt="Заявка"/>
+                </span>
+    </a>
+  </div>
+
 
   <div class="menu__langs langs">
     <a
