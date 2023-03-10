@@ -20,7 +20,7 @@
     <button class="icon-button menu__show">
       <img src="src/images/icons/burger.svg" alt="close">
     </button>
-    <span class="menu__delimiter"></span>
+    <span class="menu__delimiter hideOnVerySmallAndLow"></span>
     <div class="logo menu__logo">
       <a href="#" class="logo__link" aria-label="Перейти на главную">
         <img src="/src/images/logo.svg" alt="#" class="logo__image"/>
@@ -184,9 +184,9 @@
         </a>
       </div>
     </div>
-    <nav class="section-navigation">
-      <ul class="section-navigation__items">
-        <li class="section-navigation__item">
+    <nav class="section-navigation slider">
+      <ul class="section-navigation__items slider__wrapper">
+        <li class="section-navigation__item slider__item">
           <a
               href="#"
               class="section-navigation__link section-navigation__link--active"
@@ -195,27 +195,27 @@
             Ремонтируемые бренды
           </a>
         </li>
-        <li class="section-navigation__item">
+        <li class="section-navigation__item slider__item">
           <a href="#" class="section-navigation__link" aria-label="1">
             Дополнительные услуги
           </a>
         </li>
-        <li class="section-navigation__item">
+        <li class="section-navigation__item slider__item">
           <a href="#" class="section-navigation__link" aria-label="1">
             Цены на услуги
           </a>
         </li>
-        <li class="section-navigation__item">
+        <li class="section-navigation__item slider__item">
           <a href="#" class="section-navigation__link" aria-label="1">
             Адреса сервисных центров
           </a>
         </li>
-        <li class="section-navigation__item">
+        <li class="section-navigation__item slider__item">
           <a href="#" class="section-navigation__link" aria-label="1">
             Специальные цены
           </a>
         </li>
-        <li class="section-navigation__item">
+        <li class="section-navigation__item slider__item">
           <a href="#" class="section-navigation__link" aria-label="1">
             Отзывы
           </a>
@@ -290,9 +290,9 @@
       <header class="block__header">
         <h2 class="block__title">Ремонт техники различных брендов</h2>
       </header>
-      <div class="block__wrapper">
-        <div class="block__items">
-          <div class="block__item brand">
+      <div class="block__wrapper slider">
+        <div class="block__items slider__wrapper">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/Lenovo.png"
                 alt="Lenovo"
@@ -300,7 +300,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/Samsung.png"
                 alt="Samsung"
@@ -308,7 +308,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/Apple.png"
                 alt="Apple"
@@ -316,7 +316,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/ViewSonic.png"
                 alt="ViewSonic"
@@ -324,7 +324,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/Bosch.png"
                 alt="Bosch"
@@ -332,7 +332,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/HP.png"
                 alt="HP"
@@ -340,7 +340,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/Acer.png"
                 alt="Acer"
@@ -348,7 +348,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/Sony.svg"
                 alt="Sony"
@@ -356,7 +356,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/HP.png"
                 alt="HP"
@@ -364,7 +364,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/Acer.png"
                 alt="Acer"
@@ -372,7 +372,7 @@
             />
             <button class="brand__button arrow-button"></button>
           </div>
-          <div class="block__item brand">
+          <div class="block__item brand slider__item">
             <img
                 src="src/images/brands/Sony.svg"
                 alt="Sony"
@@ -381,10 +381,11 @@
             <button class="brand__button arrow-button"></button>
           </div>
         </div>
+        <div class="slider__pagination"></div>
       </div>
       <a
           href="#"
-          class="block__read-more read-more"
+          class="block__read-more read-more hideOnMedAndLow"
           data-target="#brands"
           data-class="block--expanded"
       >
@@ -395,9 +396,9 @@
       <header class="block__header">
         <h2 class="block__title">Ремонт различных видов техники</h2>
       </header>
-      <div class="block__wrapper">
-        <div class="block__items">
-          <div class="block__item tech">
+      <div class="block__wrapper slider">
+        <div class="block__items slider__wrapper">
+          <div class="block__item slider__item tech">
             <h1 class="tech__title">Ремонт ноутбуков</h1>
             <img
                 class="tech__image"
@@ -406,7 +407,7 @@
             />
             <button class="tech__button arrow-button"></button>
           </div>
-          <div class="block__item tech">
+          <div class="block__item slider__item tech">
             <h1 class="tech__title">Ремонт планшетов</h1>
             <img
                 class="tech__image"
@@ -415,7 +416,7 @@
             />
             <button class="tech__button arrow-button"></button>
           </div>
-          <div class="block__item tech">
+          <div class="block__item slider__item tech">
             <h1 class="tech__title">Ремонт ПК</h1>
             <img
                 class="tech__image"
@@ -424,7 +425,7 @@
             />
             <button class="tech__button arrow-button"></button>
           </div>
-          <div class="block__item tech">
+          <div class="block__item slider__item tech">
             <h1 class="tech__title">Ремонт мониторов</h1>
             <img
                 class="tech__image"
@@ -433,7 +434,7 @@
             />
             <button class="tech__button arrow-button"></button>
           </div>
-          <div class="block__item tech">
+          <div class="block__item slider__item tech">
             <h1 class="tech__title">Ремонт мониторов</h1>
             <img
                 class="tech__image"
@@ -442,7 +443,7 @@
             />
             <button class="tech__button arrow-button"></button>
           </div>
-          <div class="block__item tech">
+          <div class="block__item slider__item tech">
             <h1 class="tech__title">Ремонт мониторов</h1>
             <img
                 class="tech__image"
@@ -452,10 +453,11 @@
             <button class="tech__button arrow-button"></button>
           </div>
         </div>
+        <div class="slider__pagination"></div>
       </div>
       <a
           href="#"
-          class="block__read-more read-more"
+          class="block__read-more read-more hideOnMedAndLow"
           data-target="#tech"
           data-class="block--expanded"
       >
@@ -467,57 +469,60 @@
         <h2 class="block__title">Цены на услуги</h2>
       </div>
 
-      <div class="price__caption">
-        <div class="price__row">
-          <p class="price__title">Ремонтные услуги</p>
-          <p class="price__cost">Цена</p>
-          <p class="price__time">Срок</p>
-          <p class="price__controls"></p>
-        </div>
-      </div>
-      <div class="price__rows">
-        <div class="price__row">
-          <div class="price__title">Диагностика</div>
-          <div class="price__cost">Бесплатно</div>
-          <div class="price__time">30 мин</div>
-          <div class="price__controls"
-          ><a href="#" class="price__button button">Заказать</a>
+      <div class="price__wrapper mobile-slider">
+        <div class="price__caption ">
+          <div class="price__row ">
+            <p class="price__title">Ремонтные услуги</p>
+            <p class="price__cost">Цена</p>
+            <p class="price__time">Срок</p>
+            <p class="price__controls"></p>
           </div>
         </div>
-        <div class="price__row">
-          <div class="price__title">Замена дисплея</div>
-          <div class="price__cost">1 000 ₽</div>
-          <div class="price__time">30-120 мин</div>
-          <div class="price__controls"
-          ><a href="#" class="price__button button">Заказать</a>
+        <div class="price__rows mobile-slider__wrapper">
+          <div class="price__row mobile-slider__item">
+            <div class="price__title">Диагностика</div>
+            <div class="price__cost">Бесплатно</div>
+            <div class="price__time">30 мин</div>
+            <div class="price__controls"
+            ><a href="#" class="price__button button">Заказать</a>
+            </div>
+          </div>
+          <div class="price__row mobile-slider__item">
+            <div class="price__title">Замена дисплея</div>
+            <div class="price__cost">1 000 ₽</div>
+            <div class="price__time">30-120 мин</div>
+            <div class="price__controls"
+            ><a href="#" class="price__button button">Заказать</a>
+            </div>
+          </div>
+          <div class="price__row mobile-slider__item">
+            <div class="price__title">Замена полифонического динамика</div>
+            <div class="price__cost">1 000 ₽</div>
+            <div class="price__time">30-120 мин</div>
+            <div class="price__controls"
+            ><a href="#" class="price__button button">Заказать</a>
+            </div>
+          </div>
+          <div class="price__row mobile-slider__item">
+            <div class="price__title"
+            >Тестирование с выдачей технического заключения
+            </div>
+            <div class="price__cost">1 000 ₽</div>
+            <div class="price__time">30-120 мин</div>
+            <div class="price__controls"
+            ><a href="#" class="price__button button">Заказать</a>
+            </div>
+          </div>
+          <div class="price__row mobile-slider__item">
+            <div class="price__title">Замена программного обеспечения</div>
+            <div class="price__cost">1 000 ₽</div>
+            <div class="price__time">30-120 мин</div>
+            <div class="price__controls"
+            ><a href="#" class="price__button button">Заказать</a>
+            </div>
           </div>
         </div>
-        <div class="price__row">
-          <div class="price__title">Замена полифонического динамика</div>
-          <div class="price__cost">1 000 ₽</div>
-          <div class="price__time">30-120 мин</div>
-          <div class="price__controls"
-          ><a href="#" class="price__button button">Заказать</a>
-          </div>
-        </div>
-        <div class="price__row">
-          <div class="price__title"
-          >Тестирование с выдачей технического заключения
-          </div>
-          <div class="price__cost">1 000 ₽</div>
-          <div class="price__time">30-120 мин</div>
-          <div class="price__controls"
-          ><a href="#" class="price__button button">Заказать</a>
-          </div>
-        </div>
-        <div class="price__row">
-          <div class="price__title">Замена программного обеспечения</div>
-          <div class="price__cost">1 000 ₽</div>
-          <div class="price__time">30-120 мин</div>
-          <div class="price__controls"
-          ><a href="#" class="price__button button">Заказать</a>
-          </div>
-        </div>
+        <div class="mobile-slider__pagination"></div>
       </div>
 
       <p class="price__disclaimer">

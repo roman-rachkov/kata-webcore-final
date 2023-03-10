@@ -9,6 +9,7 @@
   }
 
   &__wrapper {
+    padding-top: 81px;
     max-height: 250px;
     overflow: hidden;
     transition: $open-transition;
@@ -19,7 +20,6 @@
   }
 
   &__items {
-    padding-top: 81px;
     margin-left: -3px;
     display: flex;
     justify-content: flex-start;

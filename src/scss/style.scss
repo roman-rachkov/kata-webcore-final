@@ -27,6 +27,12 @@ main {
   }
 }
 
+.hideOnVerySmallAndLow {
+  @include responsiveMax($res-xs) {
+    display: none;
+  }
+}
+
 a {
   color: $text-main;
   text-decoration: none;
@@ -35,3 +41,7 @@ a {
     text-decoration: underline;
   }
 }
+
+//.swiper-slide {
+//  width: unset;
+//}

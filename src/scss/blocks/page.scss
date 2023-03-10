@@ -16,8 +16,21 @@
     max-width: unset;
   }
 
+  @include responsiveMax($res-xs) {
+    padding: 32px 16px 5px;
+  }
+
+  &__post {
+    @include responsiveMax($res-m) {
+      margin-top: 20px;
+    }
+  }
+
   &__hardware {
     margin-top: 34px;
+    @include responsiveMax($res-m) {
+      margin-top: 0;
+    }
 
     &.block--expanded {
       .block__wrapper {
@@ -27,10 +40,16 @@
   }
 
   &__price {
-    margin-top: 36px;
+    margin-top: 34px;
+    @include responsiveMax($res-m) {
+      margin-top: 0;
+    }
   }
 
   &__footer {
     margin-top: 54px;
+    @include responsiveMax($res-xs) {
+      margin-top: 15px;
+    }
   }
 }

@@ -39,6 +39,9 @@
 
   .menu__logo {
     margin-right: auto;
+    @include responsiveMax($res-xs) {
+      margin-left: 10px;
+    }
   }
 
   &__close {
@@ -80,6 +83,9 @@
       display: block;
       margin-top: 0;
       margin-left: auto;
+    }
+    @include responsiveMax($res-xs) {
+      display: none;
     }
   }
 

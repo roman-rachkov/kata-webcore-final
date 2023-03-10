@@ -18,6 +18,7 @@
     margin: 0 0 6px 0;
     border: 2px solid transparent;
     border-radius: 6px;
+    width: unset;
 
     &:has(.section-navigation__link--active) {
       background-color: $white-color;

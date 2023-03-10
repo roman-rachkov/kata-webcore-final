@@ -6,13 +6,28 @@
   color: $text-second;
   padding: 32px 0 20px;
   position: relative;
+
+  @include responsiveMax($res-xs) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+  }
+
   p {
     margin: 0;
+    @include responsiveMax($res-xs) {
+      text-align: center;
+      margin: 15px;
+    }
   }
 
   &__no-offer {
     max-width: 330px;
     text-align: right;
+    @include responsiveMax($res-xs) {
+      text-align: center;
+    }
   }
 
   &:before {

@@ -2,12 +2,29 @@
   min-height: 340px;
   position: relative;
 
+  @include responsiveMax($res-m) {
+    min-height: 225px;
+  }
+  @include responsiveMax($res-xs) {
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+    transition: min-height 0.4s linear;
+  }
+
   &--expanded {
+    @include responsiveMax($res-xs) {
+      transition: min-height 0.2s linear;
+      min-height: 1065px;
+    }
     .post__wrapper {
       transition: $close-transition;
       max-height: 600px;
       @include responsiveMax($res-xl) {
         max-height: 630px;
+      }
+      @include responsiveMax($res-m) {
+        max-height: 670px;
       }
     }
   }
@@ -19,6 +36,13 @@
     margin-left: 33px;
     margin-bottom: 33px;
     transform: translateX(4px);
+    @include responsiveMax($res-m) {
+      width: 360px;
+      height: 208px;
+    }
+    @include responsiveMax($res-xs) {
+      display: none;
+    }
   }
 
   &__wrapper {
@@ -27,6 +51,10 @@
     overflow: hidden;
     padding-top: 10px;
     margin-bottom: 16px;
+
+    @include responsiveMax($res-xs) {
+      max-height: 70px;
+    }
   }
 
   &__image {
@@ -37,6 +65,17 @@
     position: absolute;
     right: -3px;
     top: 0;
+    @include responsiveMax($res-m) {
+      width: 360px;
+      height: 208px;
+    }
+    @include responsiveMax($res-xs) {
+      //position: relative;
+      width: 100%;
+      height: auto;
+      bottom: 0;
+      top: unset;
+    }
   }
 
   &__paragraph {

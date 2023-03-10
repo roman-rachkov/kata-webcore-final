@@ -2,8 +2,10 @@
   &__caption {
     display: flex;
     padding: 0 22px;
-    margin-top: 75px;
     color: $text-second;
+    @include responsiveMax($res-xs) {
+      display: none;
+    }
     .price__row {
       letter-spacing: 0;
       padding: 0;
@@ -17,6 +19,11 @@
     padding: 0 22px;
     border-radius: 6px;
     background-color: $white-color;
+    @include responsiveMax($res-xs) {
+      background-color: transparent;
+      flex-direction: row;
+      padding: 70px 0 0;
+    }
   }
 
   &__row {
@@ -27,19 +34,66 @@
     font-size: 0.875em;
     &:not(:last-child) {
       border-bottom: 1px solid $item-border;
+      @include responsiveMax($res-xs) {
+        border-bottom: none;
+      }
+    }
+
+    @include responsiveMax($res-xs) {
+      width: 260px;
+      height: 200px;
+      background-color: white;
+      display: grid;
+      border-radius: 6px;
+      padding: 16px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'title title'
+        'price price'
+        'time controll';
     }
   }
 
   &__title {
     width: 470px;
+    grid-area: title;
+    @include responsiveMax($res-xs) {
+      width: auto;
+      &:before {
+        content: 'Ремонтные услуги';
+        display: block;
+        color: $text-second;
+        @include font-medium;
+      }
+    }
   }
 
   &__cost {
     width: 227px;
+    grid-area: price;
+    @include responsiveMax($res-xs) {
+      width: auto;
+      &:before {
+        content: 'Цена';
+        display: block;
+        color: $text-second;
+        @include font-medium;
+      }
+    }
   }
 
   &__time {
     width: 190px;
+    grid-area: time;
+    @include responsiveMax($res-xs) {
+      width: auto;
+      &:before {
+        content: 'Срок';
+        display: block;
+        color: $text-second;
+        @include font-medium;
+      }
+    }
   }
 
   &__controls {
@@ -47,6 +101,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-area: controll;
   }
 
   &__disclaimer {

@@ -1,0 +1,20 @@
+.mobile-slider,
+.slider {
+  @include responsiveMax($res-m) {
+    overflow-y: unset;
+    max-height: unset;
+  }
+
+  &__wrapper {
+    @include responsiveMax($res-m) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__pagination {
+    display: none;
+    @include responsiveMax($res-m) {
+      display: block;
+      position: relative;
+    }
+  }
+}
