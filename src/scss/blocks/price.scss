@@ -109,6 +109,9 @@
     max-width: 420px;
     font-size: 0.875em;
     line-height: 1.4em;
+    @include responsiveMax($res-xs) {
+      margin-top: 15px;
+    }
   }
 
   &__offer {

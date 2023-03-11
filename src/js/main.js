@@ -13,8 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(event.target.dataset.target)
 
       target.classList.toggle(event.target.dataset.class)
-      event.target.classList.toggle('read-more--active')
 
+      if (target.classList.contains('post--expanded')) {
+        const textHeight = document.querySelector('.post__text').offsetHeight
+        const imgHeight = document.querySelector('.post__image').offsetHeight
+
+        let wrapper = document.querySelector('.post--expanded .post__wrapper')
+        wrapper.style.maxHeight = `${textHeight}px`
+        target.style.minHeight = `${textHeight + imgHeight}px`
+        console.log(wrapper, wrapper.style)
+      } else {
+        document.querySelector('.post__wrapper').style.maxHeight = ''
+        target.style.minHeight = ''
+      }
+
+      event.target.classList.toggle('read-more--active')
       const text = event.target.dataset.text ?? 'Свернуть'
       event.target.dataset.text = event.target.innerText
       event.target.innerText = text
@@ -31,9 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-modal]').forEach((element) => {
     element.addEventListener('click', (event) => {
       event.preventDefault()
+      document.querySelector('.menu--active').classList.remove('menu--active')
       document.querySelector(element.dataset.modal).showModal()
     })
   })
+
+  document.querySelectorAll('.modal').forEach((element) => {
+    element.addEventListener('click', (event) => {
+      event.stopPropagation()
+      console.log(event.target.tagName)
+      if (event.target.tagName.toLowerCase() === 'dialog') {
+        event.target.close()
+      }
+    })
+  })
+
   document.querySelector('.menu__close').addEventListener('click', (event) => {
     event.preventDefault()
     event.target.closest('.menu').classList.remove('menu--active')
@@ -42,8 +67,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.menu__show').addEventListener('click', (event) => {
     event.preventDefault()
     event.target.closest('.menu').classList.add('menu--active')
+
+    document.querySelector('.menu--active').addEventListener('click', (e) => {
+      e.stopPropagation()
+      if (e.target.classList.contains('menu--active')) {
+        e.target.classList.remove('menu--active')
+      }
+    })
   })
 
+  /*------------------------------*/
   let swiper
   let mobileSwiper
 
@@ -59,6 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('resize', () => {
+    // textHeight = document.querySelector('.post__text').offsetHeight
+    // console.log(textHeight)
+
     if (mediumMedia.matches) {
       initSwiper()
     } else {

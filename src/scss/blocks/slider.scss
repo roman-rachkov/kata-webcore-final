@@ -8,6 +8,7 @@
   &__wrapper {
     @include responsiveMax($res-m) {
       flex-wrap: nowrap;
+      height: auto;
     }
   }
   &__pagination {
@@ -15,6 +16,16 @@
     @include responsiveMax($res-m) {
       display: block;
       position: relative;
+      bottom: 0 !important;
+      top: unset !important;
+    }
+  }
+}
+
+.mobile-slider {
+  &__wrapper {
+    @include responsiveMax($res-xs) {
+      margin-bottom: 15px;
     }
   }
 }
