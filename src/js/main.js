@@ -16,11 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (target.classList.contains('post--expanded')) {
         const textHeight = document.querySelector('.post__text').offsetHeight
-        const imgHeight = document.querySelector('.post__image').offsetHeight
 
         let wrapper = document.querySelector('.post--expanded .post__wrapper')
-        wrapper.style.maxHeight = `${textHeight}px`
-        target.style.minHeight = `${textHeight + imgHeight}px`
+        wrapper.style.maxHeight = `${textHeight + 10}px`
+
+        let margin = 0
+        if (window.matchMedia('(max-width: 520px)').matches) {
+          const imgHeight = document.querySelector('.post__image').offsetHeight
+          margin = imgHeight + 50
+        }
+
+        target.style.minHeight = `${textHeight + margin + 10}px`
         console.log(wrapper, wrapper.style)
       } else {
         document.querySelector('.post__wrapper').style.maxHeight = ''

@@ -1,4 +1,5 @@
 .tech {
+  display: block;
   position: relative;
   width: 240px;
   height: 160px;
@@ -7,6 +8,20 @@
   padding: 5px;
   margin-bottom: 16px;
   background-color: $white-color;
+
+  &:hover {
+    .tech__title {
+      text-decoration: underline;
+    }
+
+    .tech__button {
+      border: 2px solid $button-hover;
+
+      &:after {
+        background-color: $button-hover;
+      }
+    }
+  }
 
   &__image {
     width: 100%;

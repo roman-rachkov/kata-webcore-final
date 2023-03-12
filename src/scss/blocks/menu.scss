@@ -20,6 +20,10 @@
     z-index: 1000;
   }
 
+  @include responsiveMax($res-xs) {
+    padding: 15px 16px;
+  }
+
   &:before {
     content: '';
     display: block;
@@ -98,6 +102,7 @@
 
     @include responsiveMax($res-m) {
       display: block;
+      //flex-grow: 1;
     }
   }
 
@@ -108,14 +113,8 @@
     }
   }
 
-  &__actions,
-  &__shadow,
-  &__email,
-  &__phone {
-    display: none;
-  }
-
   &__actions {
+    display: none;
     @include responsiveMax($res-m) {
       display: flex;
     }
@@ -133,6 +132,14 @@
 
   &__action-icon {
     margin-left: 0;
+  }
+
+  &__shadow,
+  &__email,
+  &__phone {
+    @include responsiveMax($res-m) {
+      display: none;
+    }
   }
 
   &--active {

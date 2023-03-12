@@ -42,6 +42,9 @@ a {
   }
 }
 
-//.swiper-slide {
-//  width: unset;
-//}
+.xxs-breaker {
+  display: none;
+  @include responsiveMax($res-xxs) {
+    display: inline-block;
+  }
+}

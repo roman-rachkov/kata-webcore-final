@@ -20,7 +20,7 @@
   }
 
   &__items {
-    margin-left: -3px;
+    //margin-left: -3px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -32,7 +32,7 @@
   }
 
   &__item {
-    margin-right: 32px;
+    margin-right: 31px;
 
     @include responsiveMax($res-xl) {
       margin-right: 9px;
@@ -63,6 +63,16 @@
     background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
     margin: 0;
     padding-left: 33px;
+
+    @include responsiveMax($res-xxs) {
+      line-height: 1.5em;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      right: 0;
+      //max-width: 100vw;
+      //max-width: 300px;
+    }
   }
 
   &__read-more {

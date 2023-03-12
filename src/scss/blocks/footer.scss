@@ -12,12 +12,18 @@
     justify-content: center;
     align-items: center;
     padding: 5px 20px;
+    text-align: center;
   }
 
-  p {
-    margin: 0;
+  &__policy {
+    color: $text-second;
+  }
+
+  &__copyright {
+    p {
+      margin: 0;
+    }
     @include responsiveMax($res-xs) {
-      text-align: center;
       margin: 15px;
     }
   }
@@ -27,6 +33,7 @@
     text-align: right;
     @include responsiveMax($res-xs) {
       text-align: center;
+      margin: 15px;
     }
   }
 

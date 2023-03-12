@@ -11,6 +11,15 @@
     min-height: 480px;
     transition: min-height 0.4s linear;
   }
+  @include responsiveMax(430px) {
+    min-height: 410px;
+  }
+  @include responsiveMax(380px) {
+    min-height: 370px;
+  }
+  @include responsiveMax($res-xxs) {
+    min-height: 390px;
+  }
 
   &--expanded {
     @include responsiveMax($res-xs) {
@@ -54,6 +63,10 @@
 
     @include responsiveMax($res-xs) {
       max-height: 70px;
+    }
+
+    @include responsiveMax($res-xxs) {
+      max-height: 120px;
     }
   }
 
